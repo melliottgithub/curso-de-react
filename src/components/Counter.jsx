@@ -9,9 +9,10 @@ const Counter = () => {
 
   return (
     <Fragment>
-      <h1>Contador</h1>
-      <h3 onClick>plus: {counter}</h3>
+      <h1>Counter</h1>
+      <h3 onClick>kisses: {counter}</h3>
       <button onClick={increment}>increment</button>
+      <h4>you cook? {counter > 2 ? "Yes" : "No"}</h4>
     </Fragment>
   );
 };
