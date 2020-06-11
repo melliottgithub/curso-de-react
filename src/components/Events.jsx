@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 
 const Events = () => {
 
+    const [text, setText] = useState('Text from state')
+
     const handleClick = () => {
-        
+        setText('Ouch lo cambie')
     }
 
     return (
@@ -11,6 +13,7 @@ const Events = () => {
             <hr />
             <h2>Eventos</h2>
             <button onClick={handleClick}>Click</button>
+            <h2>{text}</h2>
         </Fragment>
     )
 }
