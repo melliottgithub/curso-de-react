@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Paragraph from './components/Paragraph';
+import Variables from './components/Variables';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Hi React</h1>
         <Paragraph />
+        <Variables />
       </header>
     </div>
   );
