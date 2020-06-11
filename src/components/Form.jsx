@@ -2,12 +2,26 @@ import React, { Fragment, useState } from "react";
 
 const Form = () => {
   const [fruit, setFruit] = useState("");
-  const [description, setDescription] = useState("");
+    const [description, setDescription] = useState("");
+    
+    const saveData = (e) => {
+        e.preventDefault()
+
+        if (!fruit.trim()) {
+            return
+        }
+        if (!description.trim()) {
+            return
+        }
+        e.target.reset()
+        setFruit('')
+        setDescription('')
+    }
 
   return (
     <Fragment>
       <h2>Form</h2>
-      <form action="">
+      <form onSubmit={saveData}>
         <input
           type="text"
           name="fruit"
@@ -24,7 +38,7 @@ const Form = () => {
           className="form-control mb-2"
           onChange={(e) => setDescription(e.target.value)}
         />
-        <button className="btn btn-primary btn-block">Add</button>
+        <button type='submit' className="btn btn-primary btn-block">Add</button>
       </form>
     </Fragment>
   );
