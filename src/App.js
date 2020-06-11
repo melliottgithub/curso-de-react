@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import Lists from './components/Lists';
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hi React</h1>
-        <Lists />
+        <h1>This is React</h1>
+        <Form />
       </header>
     </div>
   );
